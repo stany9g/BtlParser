@@ -9,14 +9,24 @@ namespace BtlParser
     interface IXmlPair
     {
         /// <summary>
-        /// The path of the current Xml
+        /// The reference path of the current Xml
         /// </summary>
-        string FilePath { get; set; }
+        string ReferencePath { get; }
 
         /// <summary>
-        /// Contains statements of one xml
+        /// The analysis path of the current Xml
         /// </summary>
-        IXmlStatementsParser Statements { get; set; }
+        string AnalysisPath { get;  }
+
+        /// <summary>
+        /// Contains reference statements of one xml
+        /// </summary>
+        IXmlStatementsParser ReferenceStatements { get;  }
+
+        /// <summary>
+        /// Contains analysis statements of one xml
+        /// </summary>
+        IXmlStatementsParser AnalysisStatements { get; }
 
     }
 }
