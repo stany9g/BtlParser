@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace BtlParser
 {
-    interface IXmlPairer
+    interface IStatementsPairer
     {
         /// <summary>
         /// Contains all the morphology statements
         /// </summary>
-        IEnumerable<IXmlPair> Pairs { get; }
+        IEnumerable<IStatementsPair> Pairs { get; }
 
         /// <summary>
         /// Fill the <see cref="Pairs"/> with the data from directory

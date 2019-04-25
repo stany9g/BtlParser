@@ -8,7 +8,7 @@ using System.Xml.Linq;
 
 namespace BtlParser
 {
-    public class XmlStatementsParser : IXmlStatementsParser
+    public class XmlStatementsParser : IStatementsParser
     {
         public IEnumerable<string> Morphology { get; private set; }
 
@@ -20,7 +20,6 @@ namespace BtlParser
             Rhythms = GetStatements(xml, "Rhythm");
             Morphology = GetStatements(xml, "Morphology");
         }
-
 
         private IEnumerable<string> GetStatements(XDocument xml, string statementType)
         {

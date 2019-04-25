@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BtlParser
 {
-    interface IXmlStatementsParser
+    public interface IStatementsParser
     {
         /// <summary>
         /// Contains all the morphology statements
