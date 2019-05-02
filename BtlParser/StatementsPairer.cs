@@ -22,8 +22,8 @@ namespace BtlParser
                 throw new DirectoryNotFoundException($"{analysisDirectory} does not exists");
             }
 
-           var referenceFiles = Directory.GetFiles(referenceDirectory);
-           var analysisFiles = Directory.GetFiles(analysisDirectory);
+           var referenceFiles = Directory.GetFiles(referenceDirectory, "*.xml");
+           var analysisFiles = Directory.GetFiles(analysisDirectory, "*.xml");
 
             if(referenceFiles.Count() != analysisFiles.Count())
             {
