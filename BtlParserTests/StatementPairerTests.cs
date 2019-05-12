@@ -26,5 +26,20 @@ namespace BtlParserTests
             // Assert
             Assert.IsTrue(statementsPairer.Pairs.Count() == 2);
         }
+
+        [TestMethod]
+        public void RightPairingPatientTest()
+        {
+            // Arrange
+            string testPath = Directory.GetCurrentDirectory();
+
+            IStatementsPairer statementsPairer = new StatementsPatientPairer();
+
+            // Act
+            statementsPairer.MakePairs(testPath, testPath);
+
+            // Assert
+            Assert.IsTrue(statementsPairer.Pairs.Count() == 2);
+        }
     }
 }

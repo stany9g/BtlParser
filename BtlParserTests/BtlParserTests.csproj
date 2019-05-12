@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="StatementPairerTests.cs" />
+    <Compile Include="XmlParserTest.cs" />
     <Compile Include="XmlStatementsParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

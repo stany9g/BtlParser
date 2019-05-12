@@ -27,7 +27,7 @@ namespace BtlParserTests
 
 
             // Act
-            IStatementsParser xmlStatementsParser = new XmlStatementsParser(filePath);
+            IStatements xmlStatementsParser = new XmlStatements(filePath);
 
 
             // Assert
@@ -45,7 +45,7 @@ namespace BtlParserTests
             var expectedRhytms = new List<string>();
 
             // Act
-            IStatementsParser xmlStatementsParser = new XmlStatementsParser(filePath);
+            IStatements xmlStatementsParser = new XmlStatements(filePath);
 
             // Assert
             CollectionAssert.AreEqual(expectedMorphology, xmlStatementsParser.Morphology.ToList(), "Testing Morphology statements");
