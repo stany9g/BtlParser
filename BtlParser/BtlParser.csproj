@@ -42,14 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IStatementsPairer.cs" />
-    <Compile Include="IStatementsPair.cs" />
-    <Compile Include="IStatementsParser.cs" />
+    <Compile Include="Interfaces\IStatementsPairer.cs" />
+    <Compile Include="Interfaces\IStatementsPair.cs" />
+    <Compile Include="Interfaces\IStatements.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StatementPair.cs" />
     <Compile Include="StatementsPairer.cs" />
-    <Compile Include="XmlStatementsParser.cs" />
+    <Compile Include="StatementsPatientPairer.cs" />
+    <Compile Include="StaticHelpers\XmlParser.cs" />
+    <Compile Include="XmlStatements.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

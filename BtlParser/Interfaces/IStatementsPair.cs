@@ -21,11 +21,16 @@ namespace BtlParser
         /// <summary>
         /// Contains reference statements of one xml
         /// </summary>
-        IStatementsParser ReferenceStatements { get;  }
+        IStatements ReferenceStatements { get;  }
 
         /// <summary>
         /// Contains analysis statements of one xml
         /// </summary>
-        IStatementsParser AnalysisStatements { get; }
+        IStatements AnalysisStatements { get; }
+
+        /// <summary>
+        /// If Pair is right paired
+        /// </summary>
+        bool Paired { get;  }
     }
 }

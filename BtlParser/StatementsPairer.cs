@@ -32,7 +32,7 @@ namespace BtlParser
            var pairs = new List<IStatementsPair>();
            for (int i = 0; i < referenceFiles.Count(); i++)
            {
-                var pair = new StatementPair(referenceFiles[i], analysisFiles[i]);
+                var pair = new StatementPair(referenceFiles[i], analysisFiles[i], true);
                 pairs.Add(pair);
            }
            Pairs = pairs;

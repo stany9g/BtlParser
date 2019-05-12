@@ -12,16 +12,18 @@ namespace BtlParser
 
         public string AnalysisPath { get; }
 
-        public IStatementsParser ReferenceStatements { get; }
+        public IStatements ReferenceStatements { get; }
 
-        public IStatementsParser AnalysisStatements { get; }
+        public IStatements AnalysisStatements { get; }
 
-        public StatementPair(string referencePath, string analysisPath)
+        public bool Paired { get; private set; }
+
+        public StatementPair(string referencePath, string analysisPath, bool paired)
         {
             ReferencePath = referencePath;
             AnalysisPath = analysisPath;
-            ReferenceStatements = new XmlStatementsParser(referencePath);
-            AnalysisStatements = new XmlStatementsParser(analysisPath);
+            ReferenceStatements = new XmlStatements(referencePath);
+            AnalysisStatements = new XmlStatements(analysisPath);
         }
     }
 }
